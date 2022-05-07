@@ -13,12 +13,12 @@ namespace HomeWork5
             string[] splittedStr = userStr.Split(' ');
             return splittedStr;
         }
-        public static void PrintReverse(string[] splittedStr)
-        {
+        public static void PrintReverse(string userStr)
+        {         
+            string[] splittedStr =  Split(userStr);
             Array.Reverse(splittedStr);
             foreach (string str in splittedStr)
-            {
-                
+            {               
                 Output($"{str}");
             }
         }
@@ -26,8 +26,7 @@ namespace HomeWork5
         {
             Output("Please enter your sentence: ");
             string userStr = Console.ReadLine();
-            string[] splittedStr = Split(userStr);
-            PrintReverse(splittedStr);
+            PrintReverse(userStr);
         }
     }
 }
