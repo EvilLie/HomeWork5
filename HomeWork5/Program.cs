@@ -10,7 +10,7 @@ namespace HomeWork5
         }
         public static string[] Split(string userStr)
         {
-            string[] splittedStr = userStr.Split(' ');
+            string[] splittedStr = userStr.Split(new[] { ' ', '\t', }, StringSplitOptions.RemoveEmptyEntries);
             return splittedStr;
         }
         public static void Print(string[] splittedStr)
